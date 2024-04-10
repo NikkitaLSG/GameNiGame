@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточки проектов</title>
+    <!-- Стили для карточек проектов -->
+    <style>
+        /* Стили для карточек */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            width: calc(33.33% - 20px); /* Распределение карточек по три в ряду */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+            overflow: hidden;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 5px 5px 0 0;
+            height: 350px;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+        .add-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .add-button.checked {
+            background-color: #4CAF50; /* зеленый цвет */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Кнопка возврата на страницу index.html -->
+<a href="index.html" class="back-button">Назад</a>
+
+<!-- Контейнер для карточек проектов -->
+<div class="card-container">
+    <div class="card">
+        <img src="images/8jkoebaneid2n0ln4771a5ejzovpqkqq.jpg" alt="Project 1">
+        <div class="card-content">
+            <h3>Проект Дело для своих</h3>
+            <p><strong>Заказчик: </strong> Китай</p>
+            <p><strong>Дата начала:</strong> 01.01.2024</p>
+            <p><strong>Дата окончания:</strong> 31.01.2024</p>
+        </div>
+        <button class="add-button" onclick="toggleButton(this)">Нажми меня</button>
+    </div>
+</div>
+
+    <div class="card">
+        <img src="images/466ee5cc2e2276e96cc5d504ef55f5e9.jpg" alt="Project 1">
+        <div class="card-content">
+            <h3>Проект Ресторан</h3>
+            <p><strong>Заказчик: </strong> Миит</p>
+            <p><strong>Дата начала:</strong> 15.02.2024</p>
+            <p><strong>Дата окончания:</strong> 28.02.2024</p>
+        </div>
+        <button class="add-button" onclick="toggleButton(this)">Нажми меня</button>
+    </div>
+    </div>
+
+    <div class="card">
+        <img src="images/unnamed.jpg" alt="Project 1">
+        <div class="card-content">
+            <h3>Проект Разработка карты университета</h3>
+            <p><strong>Заказчик:</strong> Миит</p>
+            <p><strong>Дата начала:</strong> 10.03.2024</p>
+            <p><strong>Дата окончания:</strong> 20.03.2024</p>
+        </div>
+        <button class="add-button" onclick="toggleButton(this)">Нажми меня</button>
+    </div>
+    </div>
+</div>
+
+<!-- Скрипт для изменения кнопки -->
+<script>
+    function toggleButton(button) {
+        button.classList.toggle('checked');
+        if (button.classList.contains('checked')) {
+            button.textContent = 'Записано'; // Изменяем текст кнопки
+        } else {
+            button.textContent = 'Нажми меня'; // Возвращаем исходный текст кнопки
+        }
+    }
+</script>
+
+</body>
+</html>
